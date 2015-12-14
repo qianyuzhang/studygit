@@ -1,0 +1,39 @@
+                      linux 虚拟机下安装git
+1   如何在centos虚拟机上安装git客户端 
+	1）.前期准备（两种方法）
+         方法一：编译安装git
+           		安装前准备：
+					命令：yum -y install zlib-devel openssl-devel perl cpio expat-devel gettext-devel openssl zlib curl autoconf tk
+							wget http://git-core.googlecode.com/files/git-1.7.10.tar.gz
+			安装git：
+					命令：tar zxf git-latest.tar.gz
+							cd git-{date} //这里是git-2012-04-17的版本，所以命令是cd git-2012-04-17
+							autoconf
+							./configure
+							make
+							make install
+							注意：make和make install在这里最好分开执行，免得有错不知道
+							git --version 
+		方法二：yum安装git
+				yum安装git前准备，我的系统是centos的：
+				命令：wget -P /etc/yum.repos.d/ http://geekery.altervista.org/geekery-el5-i386.repo
+						weget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el5.rf.i386.rpm
+						rpm -ivh rpmforge-release-0.5.2-2.el5.rf.i386.rpm
+						rpm -ivh epel-release-5-5.noarch.rpm
+				安装git：
+					命令：yum -y install git
+							git --version
+	2）生成ssh密钥
+			命令：ssh-keygen -t rsa -C 386337309@qq.com
+	3）将密钥拷贝到github上
+	4）测试是否能连接到GitHub
+			命令：ssh git@github.com
+	5）设置全局用户配置
+			命令：
+					git config --global user.name "qianyuzhang"
+					git confit --global user.email "386337309@qq.com"
+	6）下载github上的项目到本地
+			命令：
+					git clone git@github.com:qianyuzhang/studygit.git
+2.   其他
+
