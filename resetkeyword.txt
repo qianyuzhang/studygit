@@ -6,3 +6,5 @@
 	5）之后，按b，重新引导进入系统，在sh-3.2#后用passwd命令重置密码
 注意：
 	passwd命令的使用：　命令 passwd，即可，之后根据提示修改解即可
+现在的username：root
+	passwd：zhangqianyu
