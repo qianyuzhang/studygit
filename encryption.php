@@ -22,7 +22,7 @@ function encryption_str($str) {
 	
 	$hex = implode($hex);//***1***
 	$hex = str_ireplace('00000','FF',$hex);
-	$hex = str_ireplace('0000','EE',$hex);
+	$hex = str_ireplace('0000','EE',$hex);//***2***
 	$len_s = strlen($hex);
 	if ($len_s%2!==0) {
 		$len_s = $len_s+1;
