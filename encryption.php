@@ -36,4 +36,17 @@ function encryption_str($str) {
 	return $restr;
 }
 
+/**
+ * 加密文件
+ * $file 需要加密的文件的路径
+ * $filename 加密之后的文件名称
+ */
+function encrypfile($file){
+	!$file && $file = dirname(__FILE__).'/indexSuccess.php';
+	$content = file_get_contents($file);
+	$encryp = encryption($content);
+	$decryp = decryption($encryp);
+	return $encryp.'*******'.$decryp;
+}
+
 ?>
