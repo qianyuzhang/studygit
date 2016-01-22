@@ -7,4 +7,4 @@
 注意：
 	passwd命令的使用：　命令 passwd，即可，之后根据提示修改解即可
 现在的username：root
-	passwd：zhangqianyu
+	passwd：zhang7841782
