@@ -5,27 +5,27 @@
  */
 function getprimenum(){
 	$m=0;
-		for ($i = 2;$i <= 1000; $i++) {
-				if ($i == 2 || $i == 3) {
-						$m++;
-						echo $i."  ";
-				} else {
-						$mid = $i/2;
-						$ech = false;
-						for($j=2;$j<=$mid;$j++){
-								if($i % $j == 0){
-										$ech = true;
-								}
-						} 
-						if ($ech == false) {
-								$m++;
-								echo $i."  ";
-								if ($m % 8 == 0) {
-										echo "<br/>";
-								}
-						}
+	for ($i = 2;$i <= 1000; $i++) {
+		if ($i == 2 || $i == 3) {
+			$m++;
+			echo $i."  ";
+		} else {
+			$mid = $i/2;
+			$ech = false;
+			for($j=2;$j<=$mid;$j++){
+				if($i % $j == 0){
+					$ech = true;
 				}
+			} 
+			if ($ech == false) {
+				$m++;
+				echo $i."  ";
+				if ($m % 8 == 0) {
+					echo "<br/>";
+				}
+			}
 		}
+	}
 }
 
 getprimenum();
