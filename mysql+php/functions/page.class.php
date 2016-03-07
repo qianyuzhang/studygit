@@ -123,7 +123,7 @@ class newPage{
 	*$pageSize	 每一个页面的数量
 	*$atitle		 每一个连接的title中要添加的固定的文字
 	**显示格式举例    共100页  11 12 13 14 15 16 17 18 19   20  21－30  
-		快捷分页：1－10  31－40  41－50  51－60  61－70  71－80  81－90  91－100
+	*	快捷分页：1－10  31－40  41－50  51－60  61－70  71－80  81－90  91－100
 	**
 	*/
 	function __construct($curPage,$totNum,$href,$pageSize=20, $atitle = ''){
@@ -204,7 +204,7 @@ class foasalePage{//二手房租房页面（包含快捷翻页）
 	*$pageSize  每一页的数量
 	*$atitle    每一个连接中title中的固定文字
 	*显示格式举例   共121页  11 12 13 14 15 16 17 18 19 20 
-               快捷分页：1－10  31－40  41－50  51－60  61－70  71－80  81－90  91－100  101-110   111-120  121
+        *       快捷分页：1－10  31－40  41－50  51－60  61－70  71－80  81－90  91－100  101-110   111-120  121
 	*/
 	function __construct($curPage,$totNum,$href,$pageSize=20, $atitle = ''){
 		sfContext::getInstance()->getConfiguration()->loadHelpers('Url');  
